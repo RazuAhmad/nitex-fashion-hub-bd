@@ -1,19 +1,20 @@
 import React from 'react'
 import appLogoImg from '../../assets/nitex_logo.png'
-import threeLineImg from '../../assets/three-line.svg'
+import { Icon } from '@iconify/react';
 import { Popover } from '@headlessui/react'
 import { AnimatePresence, motion } from 'framer-motion'
+import CustomButton from '../CustomButton/CustomButton'
 
 const Navbar = () => {
 
-    function MobileNavLink({ children, ...props }) {
+    function MobileNavLink({ children,href, ...props }) {
         return (
           <Popover.Button
-            
+            href={href}
             className="block text-base leading-7 tracking-tight text-gray-700"
             {...props}
           >
-            {children}
+           <a href={href}> {children}</a>
           </Popover.Button>
         )
       }
@@ -25,21 +26,26 @@ const Navbar = () => {
         <div className='max-w-7xl
     mx-auto py-8 px-4 relative z-50'>
         <div className="flex justify-between items-center">
+
+          {/* Nav logo */}
             <div className='z-10'>
+            <a href="/">
             <img src={appLogoImg} alt='app logo' />
+            </a>
             </div>
 
-            {/* Nav Links */}
-            <div className="hidden lg:flex justify-between items-center sm:gap-4 md:gap-8">
-                <p className='cursor-pointer'>Features</p>
-                <p className='cursor-pointer'>Reviews</p>
-                <p className='cursor-pointer'>Pricing</p>
-                <p className='cursor-pointer'>FAQs</p>
-                <p className='cursor-pointer'>About Us</p>
+            {/*all Nav Links are here */}
+            <div className="hidden lg:flex justify-between items-center sm:gap-4 md:gap-8 ">
+                <a href='#features' className='cursor-pointer no-underline text-gray-700'>Features</a>
+                <a href='#reviews' className='cursor-pointer no-underline text-gray-700'>Reviews</a>
+                <a href='#pricing' className='cursor-pointer no-underline text-gray-700'>Pricing</a>
+                <a href="#faqs" className='cursor-pointer no-underline text-gray-700'>FAQs</a>
+                <a href="#aboutUs" className='cursor-pointer no-underline text-gray-700'>About Us</a>
             </div>
 
             <div className="flex gap-4 items-center">
 
+            {/*Only For mobile view */}
             <Popover className="lg:hidden">
               {({ open }) => (
                 <>
@@ -50,10 +56,11 @@ const Navbar = () => {
                     {({ open }) =>
                       open ? (
                         // <ChevronUpIcon className="h-6 w-6" />
-                       <image src={threeLineImg} alt='threeLine' width="512" height="512" />
+                        <Icon icon="carbon:close-filled" width="45px" height="45px"  />
                       ) : (
                         // <MenuIcon className="h-6 w-6" />
-                        <image width="512" height="512" src={threeLineImg} alt='threeLine' />
+                        
+                        <Icon width="45px" height="45px" icon="ion:reorder-three-outline" />
                       )
                     }
                   </Popover.Button>
@@ -83,6 +90,7 @@ const Navbar = () => {
                           <div className="space-y-4">
                             <MobileNavLink href="/#features">
                               Features
+                
                             </MobileNavLink>
                             <MobileNavLink href="/#reviews">
                               Reviews
@@ -91,13 +99,28 @@ const Navbar = () => {
                               Pricing
                             </MobileNavLink>
                             <MobileNavLink href="/#faqs">FAQs</MobileNavLink>
+                            <MobileNavLink href="/#faqs">About Us</MobileNavLink>
+                            
+                            <div className="flex flex-col gap-3">
+                            <div>
+                            <MobileNavLink href="#logIn">
+                            <CustomButton href="/#login" className='px-[11px] py-[7px]  border-solid border-[1px] rounded-lg cursor-pointer'>
+                            Log in
+                            </CustomButton>
+                            </MobileNavLink>
+                            </div>
+                            <div>
+                           <MobileNavLink href="/#downloadApp">
+                           <CustomButton className=' px-[11px] py-[7px] bg-black text-white border-solid border-[1px] rounded-lg cursor-pointer '>
+                            Download Our App
+                            </CustomButton>
+                           </MobileNavLink>
+                            </div>
+                            </div>
+                             
+                          
                           </div>
-                          <div className="mt-8 flex flex-col gap-4">
-                            <button href="/login" variant="outline">
-                              Log in
-                            </button>
-                            <button href="#">Download the app</button>
-                          </div>
+                          
                         </Popover.Panel>
                       </>
                     )}
@@ -106,9 +129,12 @@ const Navbar = () => {
               )}
             </Popover>
 
+            <CustomButton href="#login" className='hidden lg:block px-[11px] py-[7px] border-gray-600 border-solid border-[1px] rounded-lg cursor-pointer'>
+                  Login
+                </CustomButton>
 
-                <button className='hidden lg:block px-[11px] py-[7px] border-gray-600 border-solid border-[1px] rounded-lg cursor-pointer'>Login</button>
-                <button className='hidden lg:block px-[12px] py-[8px] rounded-lg bg-black text-white'>Download</button>
+                <CustomButton href="#downloadOurApp" className='hidden lg:block px-[12px] py-[8px] rounded-lg bg-black text-white'>Download Our App</CustomButton>
+                
             </div>
         </div>
         </div>
