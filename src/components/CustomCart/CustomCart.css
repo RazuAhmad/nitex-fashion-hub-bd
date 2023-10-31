@@ -1,0 +1,4 @@
+.custom-cart-container:hover {
+  transform: scale(1.003);
+  cursor: pointer;
+}
