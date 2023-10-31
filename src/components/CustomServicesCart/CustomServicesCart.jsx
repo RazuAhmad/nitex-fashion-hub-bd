@@ -11,14 +11,13 @@ import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import service1 from "../../assets/service1.jpg";
-
 import nitexLogo from "../../assets/nitex-logo.jpg";
 
 export default function CustomServicesCart({ serviceCategory, serviceImg }) {
   return (
     <Card
       sx={{ maxWidth: { md: "30% ", sm: "100%" }, backgroundColor: "#bcbab2" }}
+     
     >
       <CardHeader
         avatar={<Avatar src={nitexLogo} />}

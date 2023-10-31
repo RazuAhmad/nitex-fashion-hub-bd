@@ -28,7 +28,7 @@ const Navbar = () => {
           {/* Nav logo */}
           <div className="z-10">
             <a href="/">
-              <img src={appLogoImg} alt="app logo" />
+              <img src={appLogoImg} alt="app logo" className="w-[140px] md:w-full" />
             </a>
           </div>
 
@@ -47,17 +47,12 @@ const Navbar = () => {
               Testimonials
             </a>
             <a
-              href="#pricing"
+              href="#ourCollection"
               className="cursor-pointer no-underline text-gray-700"
             >
-              Pricing
+              Our Collection
             </a>
-            <a
-              href="#faqs"
-              className="cursor-pointer no-underline text-gray-700"
-            >
-              FAQs
-            </a>
+            
             <a
               href="#aboutUs"
               className="cursor-pointer no-underline text-gray-700"
@@ -118,17 +113,17 @@ const Navbar = () => {
                           className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20"
                         >
                           <div className="space-y-4">
-                            <MobileNavLink href="/#services">
+                            <MobileNavLink href="#services">
                               Services
                             </MobileNavLink>
-                            <MobileNavLink href="/#testimonials">
+                            <MobileNavLink href="#testimonials">
                               Testimonials
                             </MobileNavLink>
-                            <MobileNavLink href="/#pricing">
-                              Pricing
+                            <MobileNavLink href="#ourCollection">
+                              Our Collection
                             </MobileNavLink>
-                            <MobileNavLink href="/#faqs">FAQs</MobileNavLink>
-                            <MobileNavLink href="/#faqs">
+                            
+                            <MobileNavLink href="#aboutUs">
                               About Us
                             </MobileNavLink>
 

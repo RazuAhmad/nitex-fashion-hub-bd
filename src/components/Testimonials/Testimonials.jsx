@@ -1,9 +1,10 @@
 import React from "react";
 import CustomTestimonialCard from "./CustomTestimonialCard";
 
+
 const Testimonials = () => {
   return (
-    <div className="max-w-7xl m-auto pt-16 px-3 md:px-0">
+    <div className="max-w-7xl m-auto pt-16 px-3 md:px-0" id="testimonials" >
       {/* Testimonial header intro text */}
       <div className="mb-9 text-center">
         <h2 className="text-xl font-bold text-[#6B7280]">TESTIMONIALS</h2>

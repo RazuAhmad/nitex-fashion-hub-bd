@@ -4,6 +4,10 @@ import { Container, Stack, Typography } from "@mui/material";
 import service1 from "../../assets/service1.jpg";
 import service2 from "../../assets/service2.jpg";
 import service3 from "../../assets/service3.jpg";
+// import AOS from 'aos';
+// import 'aos/dist/aos.css'; // You can also use <link> for styles
+// // ..
+// AOS.init();
 
 const OurServices = () => {
   const allServicesDetails = [
@@ -46,10 +50,13 @@ const OurServices = () => {
         margin: "auto",
         paddingTop: { sm: "1rem", md: "2rem" },
       }}
+      id="services"
+      
     >
       <Typography
         variant="h2"
         sx={{ textAlign: "center", marginBottom: "1rem" }}
+      data-aos="fade-right"
       >
         Our Services
       </Typography>

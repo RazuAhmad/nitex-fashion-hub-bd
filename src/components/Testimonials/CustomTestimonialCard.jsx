@@ -1,6 +1,10 @@
 import React from "react";
 import reviewerPic from "../../assets/user-profile.png";
 import { Paper } from "@mui/material";
+// import AOS from 'aos';
+// import 'aos/dist/aos.css'; // You can also use <link> for styles
+// // ..
+// AOS.init();
 
 const CustomTestimonialCard = () => {
   return (
@@ -8,6 +12,7 @@ const CustomTestimonialCard = () => {
       elevation={3}
       sx={{ padding: "32px" }}
       className="max-w-full md:max-w-[30%]"
+      // data-aos="fade-right"
     >
       <h3 className="text-xl font-bold mb-2">
         Empowering Change Through <br /> fashions

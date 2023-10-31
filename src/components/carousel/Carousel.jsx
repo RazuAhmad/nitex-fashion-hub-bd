@@ -1,9 +1,8 @@
-import { Button, Image } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
 import nitexImg1 from '../../assets/nitex-wallpaper1.jpg'
 import nitexImg2 from '../../assets/nitex-wallpaper-2.jpg'
 import nitexImg3 from '../../assets/nitex-wallpaper-3.jpg'
-import { useState } from 'react';
+
 
 function CustomCarousel() {
 

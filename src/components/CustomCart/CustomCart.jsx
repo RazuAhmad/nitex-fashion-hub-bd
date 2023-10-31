@@ -3,7 +3,7 @@ import "./CustomCart.css";
 
 const CustomCart = ({ imgSrc, category }) => {
   return (
-    <div className="relative w-full md:max-w-[32%] custom-cart-container">
+    <div className="relative w-full md:max-w-[32%] custom-cart-container" >
       <img
         src={imgSrc}
         width={440}
